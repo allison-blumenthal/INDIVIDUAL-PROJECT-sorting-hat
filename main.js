@@ -3,42 +3,42 @@ const cats = [
   {
     id: 1,
     name: "Minky",
-    house: "Hufflepuff"
+    house: "Hufflscruff"
   },
   {
     id: 2,
     name: "Lilah",
-    house: "Ravenclaw"
+    house: "Ravenpaw"
   },
   {
     id: 3,
     name: "Maxx",
-    house: "Slytherin"
+    house: "Litterin"
   },
   {
     id: 4,
     name: "Azure",
-    house: "Griffindor"
+    house: "Kittendor"
   },
   {
     id: 5,
     name: "Harriet",
-    house: "Hufflepuff"
+    house: "Hufflescruff"
   },
   {
     id: 6,
     name: "Rhyme",
-    house: "Ravenclaw"
+    house: "Ravenpaw"
   },
   {
     id: 7,
     name: "Ernesto",
-    house: "Slytherin"
+    house: "Litterin"
   },
   {
     id: 8,
     name: "Ferdinand",
-    house: "Griffindor"
+    house: "Kittendor"
   }
 ]
 
@@ -67,12 +67,11 @@ const catsOnDom = (array) => {
 
 catsOnDom(cats);
 
-
 // clicking the first button to get to form
 
-const sortMyCatBtn = document.querySelector("#sortMyCatBtn");
+const getSorted = document.querySelector("#getSortedBtn");
 
-sortMyCatBtn.addEventListender('click', () => {
+getSortedBtn.addEventListener('click', () => {
   // put function to render form here
 })
 
@@ -87,13 +86,13 @@ const sortCat = (e) => {
     let houseNum = Math.floor(Math.random() * 4) + 1;
 
     if (houseNum === 1) {
-      return "Gryffindor"
+      return "Kittendor"
       } else if (houseNum === 2) {
-      return "Slytherin"
+      return "Litterin"
       } else if (houseNum === 3) {
-      return "Hufflepuff"
+      return "Ravenpaw"
       } else {
-      return "Ravenclaw"
+      return "Hufflescruff"
       }
   };
 
