@@ -1,4 +1,4 @@
-
+// array for created objects
 const cats = [
   {
     id: 1,
@@ -40,61 +40,104 @@ const cats = [
     name: "Ferdinand",
     house: "Kittendor"
   }
-]
+];
 
-// dynamically rendering to the DOM
+// array for randomly assigning houses
+const catHouses = ["Kittendor", "Litterin'", "Ravenpaw", "Hufflescruff"];
 
+
+// array for expelled cats
+const expelled = [];
+
+// rendering to the DOM
 const renderToDom = (divId, htmlToRender) => {
     const selectedDiv = document.querySelector(divId);
     selectedDiv.innerHTML = htmlToRender;
 };
 
+// getting cards on the DOM
 const catsOnDom = (array) => {
   let domString = "";
+
   for (const cat of array) {
-    domString +=
-      `<div class="card" style="width: 18rem;">
+    domString += `<div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">${cat.house}</h5>
           <p class="card-text">${cat.name}</p>
-          <a href="#" class="btn btn-primary">Expel!</a>
+          <button type="button" class="btn btn-dark" id="expel--${cat.id}">Expel!</button>
         </div>
       </div>`
     }
 
-    renderToDom("#app", domString);
+    renderToDom("#cats", domString);
+};
+
+const expelledOnDom = (array) => {
+  let domString = "";
+
+  for (const cat of array) {
+    domString += 
+      `<div class="card" style="width: 18rem;">
+        <div class="card-body">
+          <h5 class="card-title">${cat.name}</h5>
+        </div>
+      </div>`
+  }
+
+  renderToDom("#expelled", domString);
 }
 
-catsOnDom(cats);
+// getting the form on DOM 
+const formOnDom = () => {
+  const domString = 
+    `<div class="form-floating mb-3">
+      <input type="text" class="form-control" id="floatingInput" placeholder="cat-name">
+      <label for="floatingInput">Your Cat's Name</label>
+    </div>`
 
-// clicking the first button to get to form
+  renderToDom('form', domString);
+}
 
-const getSorted = document.querySelector("#getSortedBtn");
+// rendering button on DOM that opens form  
+const formButton = () => {
+  const domString = `<form>
+    <button type="button" class="btn btn-info" id="open-form">Let's Get Sorted</button>
+  </form>`
 
-getSortedBtn.addEventListener('click', () => {
-  // put function to render form here
-})
+  renderToDom("#form", domString);
+}
 
-// form to input name and create new house card 
+const createId = (array) => {
+  if (array.length) {
+    const idArray = [];
+    for (const el of array) {
+      idArray.push(el.id);
+    }
+    return Math.max(...idArray) + 1;
+  } else {
+    return 0;
+  }
+}
 
-const form = document.querySelector('form');
+const formTasks = () => {
 
-const sortCat = (e) => {
-  e.preventDefault();
+  const form = document.querySelector('form');
 
-  const assignHouse = () => {
-    let houseNum = Math.floor(Math.random() * 4) + 1;
+  form.addEventListener('submit', (e) => {
+    e.preventDefault();
 
-    if (houseNum === 1) {
-      return "Kittendor"
-      } else if (houseNum === 2) {
-      return "Litterin"
-      } else if (houseNum === 3) {
-      return "Ravenpaw"
-      } else {
-      return "Hufflescruff"
-      }
-  };
+    
+
+
+  }
+}
+
+
+
+
+
+
+  
 
   const newCatObj = {
     id: cats.length + 1,
@@ -109,4 +152,19 @@ const sortCat = (e) => {
 
 const submitButton = document.querySelector("#submit-button");
 
-form.addEventListener('submit', sortCat);
+
+
+
+
+
+
+// start app function
+const startApp = () => {
+  catsOnDom(cats);
+  expelledOnDom(expelled);
+
+
+
+}
+
+startApp();

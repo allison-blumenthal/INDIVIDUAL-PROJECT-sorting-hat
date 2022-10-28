@@ -13,11 +13,6 @@ body {
   width: 50%;  
 }
 
-.center-btn {
-  text-align: center;
-  padding: 15px;
-}
-
 .sorted-cats {
   width: 66.666%;
   background-color: lightblue;
