@@ -3,7 +3,7 @@ const cats = [
   {
     id: 1,
     name: "Minky",
-    house: "Hufflscruff"
+    house: "Hufflescruff"
   },
   {
     id: 2,
@@ -13,7 +13,7 @@ const cats = [
   {
     id: 3,
     name: "Maxx",
-    house: "Litterin"
+    house: "Litterin'"
   },
   {
     id: 4,
@@ -33,7 +33,7 @@ const cats = [
   {
     id: 7,
     name: "Ernesto",
-    house: "Litterin"
+    house: "Litterin'"
   },
   {
     id: 8,
@@ -42,12 +42,11 @@ const cats = [
   }
 ];
 
-// array for randomly assigning houses
-const catHouses = ["Kittendor", "Litterin'", "Ravenpaw", "Hufflescruff"];
-
-
 // array for expelled cats
 const expelled = [];
+
+// array for randomly assigning houses
+const catHouses = ["Kittendor", "Litterin'", "Ravenpaw", "Hufflescruff"];
 
 // rendering to the DOM
 const renderToDom = (divId, htmlToRender) => {
@@ -63,13 +62,13 @@ const catsOnDom = (array) => {
     domString += `<div class="card" style="width: 18rem;">
         <div class="card-body">
           <h5 class="card-title">${cat.house}</h5>
-          <p class="card-text">${cat.name}</p>
+          <h2 class="card-text">${cat.name}</h2>
           <button type="button" class="btn btn-dark" id="expel--${cat.id}">Expel!</button>
         </div>
       </div>`
     }
 
-    renderToDom("#cats", domString);
+    renderToDom("#goodCats", domString);
 };
 
 const expelledOnDom = (array) => {
@@ -84,7 +83,7 @@ const expelledOnDom = (array) => {
       </div>`
   }
 
-  renderToDom("#expelled", domString);
+  renderToDom("#badCats", domString);
 }
 
 // getting the form on DOM 
@@ -98,7 +97,7 @@ const formOnDom = () => {
   renderToDom('form', domString);
 }
 
-// rendering button on DOM that opens form  
+// rendering button on DOM to open form  
 const formButton = () => {
   const domString = `<form>
     <button type="button" class="btn btn-info" id="open-form">Let's Get Sorted</button>
@@ -107,6 +106,7 @@ const formButton = () => {
   renderToDom("#form", domString);
 }
 
+// create unique ids for new cats
 const createId = (array) => {
   if (array.length) {
     const idArray = [];
@@ -119,6 +119,7 @@ const createId = (array) => {
   }
 }
 
+// tasks to create new object for form entry 
 const formTasks = () => {
 
   const form = document.querySelector('form');
@@ -126,45 +127,72 @@ const formTasks = () => {
   form.addEventListener('submit', (e) => {
     e.preventDefault();
 
-    
+    const newCat = {
+      id: createId(cats),
+      name: document.querySelector("#name").value,
+      house: catHouses[Math.floor(Math.random() * catHouses.length)]
+    };
 
+    cats.push(newCat);
+    catsOnDom(cats);
 
-  }
+    form.reset();
+  })
+}
+
+// click button to show form 
+const showForm = () => {
+  document.querySelector("#open-form").addEventListener('click', formOnDom);
 }
 
 
+// click the "Expel!" button to send cat to the Dark Side
+const expelACat = () => {
+  const sortedCatsDiv = document.querySelector("#cats");
 
+  sortedCatsDiv.addEventListener('click', (e) => {
+    if(e.target.id.includes("expel")) {
+      const [, id] = e.target.id.split('--');
 
+      const index = cats.findIndex(cat => cat.id === Number(id));
 
+      const expelledCat = cats.splice(index, 1);
 
-  
+      expelled.push(expelledCat[0]);
 
-  const newCatObj = {
-    id: cats.length + 1,
-    name: document.querySelector("#name").value,
-    house: assignHouse();      
-  }
-
-  cats.push(newCatObj);
-  catsOnDom(cats);
-  form.reset();
+      catsOnDom(cats);
+      expelledOnDom(expelled);
+    }
+  })
 }
 
-const submitButton = document.querySelector("#submit-button");
+expelACat();
 
+// filtering by house with buttons 
+const buttonFilters = () => {
+  const filters = document.querySelector("#house-filters");
 
+  filters.addEventListener('click', (e)) => {
+    if(e.target.id.includes("house--")) {
+      const [, id] = e.target.id.split('--');
 
+      const numId = Number(id);
 
-
+      const catHouses = cats.filter(cat => cat.house === catHouses[numId]);
+      catsOnDom(catHouses);
+    }
+  }
+}
 
 
 // start app function
 const startApp = () => {
   catsOnDom(cats);
   expelledOnDom(expelled);
-
-
-
+  formButton();
+  showForm();
+  formTasks();
+  buttonFilters();
 }
 
 startApp();
