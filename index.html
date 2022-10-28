@@ -1,57 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Sorting Hat Assessment Project</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
-  <link rel="stylesheet" href="main.css">
-</head>
-<body>
-  <div class="card">
-    <img src="images/cat-houses.jpg" class="card-img-top" alt="Illustrations of cats representing Hogwarts houses">
-    <div class="card-body">
-      <h5 class="card-title">Hello and Welcome to Hogwarts' very first "Sorting Cat!"</h5>
-      <p class="card-text">Use the "Sorting Cat" to discover your cat's Hogwarts House.</p>
-    </div>
-  </div>
-  <div id="form">
-      <button type="button" class="btn btn-success"  id="getSortedBtn">Let's Get Sorted</button>
-  </div>
-  <div class="d-flex">
-    <div class="sorted-cats">
-      <h2>Cool Cats in their Houses</h2>
-      <div id="cats" class="d-flex flex-wrap"></div>
-    </div>
-    <div class="expelled">
-      <h2>Expelled to the Dark Side</h2>
-      <div id="bad-cats" class="d-flex flex-wrap"></div>
-    </div>
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorting Hat Assessment Project</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="main.css">
+  </head>
 
-
-
-
-
-
-
-
-
-  <!-- <div class="form-container">
-    <form class="form-floating">
-      <input type="text" class="form-control" id="name" placeholder="name" required>
-      <label for="floatingInputValue">Your Cat's Name</label>
-      <button class="btn btn-primary" type="submit" id="submit-button">Sort!</button>
-    </form>
-  </div> -->
-
-     
-
-
-
+  <body>
+    <div class="card">
+      <div class="card-body">
+        <h3 class="card-title">Hello and Welcome to Hogwarts' very first "Sorting Cat!"</h3>
+        <p class="card-text">Use the "Sorting Cat" to discover your cat's Hogwarts House.</p>
+        <img src="images/cat-houses.jpg" class="card-img-top" alt="Illustrations of cats representing Hogwarts houses">
       </div>
-      
-
+    </div>
+    <div id="form" class="center-btn">
+        <button type="button" class="btn btn-success"  id="getSortedBtn">Let's Get Sorted</button>
+    </div>
+    <div class="d-flex">
+      <div class="sorted-cats">
+        <h2>Cool Cats in their Houses</h2>
+        <div id="cats" class="d-flex flex-wrap"></div>
+      </div>
+      <div class="expelled">
+        <h2>Expelled to the Dark Side</h2>
+        <div id="bad-cats" class="d-flex flex-wrap"></div>
+      </div>
 
 
     </div>
