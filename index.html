@@ -17,28 +17,32 @@
         <img src="images/cat-houses.jpg" class="card-img-top" alt="Illustrations of cats representing Hogwarts houses">
       </div>
     </div>
+
     <div id="form" class="center-btn">
         <button type="button" class="btn btn-success"  id="getSortedBtn">Let's Get Sorted</button>
     </div>
+
     <div class="d-flex">
+
       <div class="sorted-cats">
-        <h2>Cool Cats in their Houses</h2>
+        <div id="house-filters">
+          <button type="button" class="btn btn-danger" id="filter--K">Kittendor</button>
+          <button type="button" class="btn btn-success" id="filter--L">Litterin'</button>
+          <button type="button" class="btn btn-primary" id="filter--R">Ravenpaw</button>
+          <button type="button" class="btn btn-warning" id="filter--H">Hufflescruff</button>
+        </div>
+        <h2 class="house-cats-title">Cool Cats in their Houses</h2>
         <div id="cats" class="d-flex flex-wrap"></div>
       </div>
+
       <div class="expelled">
         <h2>Expelled to the Dark Side</h2>
         <div id="bad-cats" class="d-flex flex-wrap"></div>
       </div>
-
-
     </div>
-  </div>
 
-
-
-
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
-  <script src="main.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+    
+  </body>
 </html>
