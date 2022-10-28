@@ -1,3 +1,38 @@
 body {
-  background-color: lightgray;
+  background-color: white;
+}
+
+.card {
+  text-align: center;
+}
+
+.card-img-top {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;  
+}
+
+.center-btn {
+  text-align: center;
+  padding: 15px;
+}
+
+.sorted-cats {
+  width: 66.666%;
+  background-color: lightblue;
+  padding: 15px;
+  text-align: center;
+}
+
+.house-cats-title {
+  padding: 10px;
+}
+
+.expelled {
+  width: 33.333%;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  text-align: center;
 }
