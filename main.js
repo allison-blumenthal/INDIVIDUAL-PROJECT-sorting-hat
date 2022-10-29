@@ -44,7 +44,7 @@ const expelledOnDom = (array) => {
   }
 
   renderToDom("#badCats", domString);
-}
+};
 
 // getting the form on DOM 
 const formOnDom = () => {
@@ -56,7 +56,7 @@ const formOnDom = () => {
     <button type="submit" class="btn btn-success">Sort My Cat</button>`;
 
   renderToDom('form', domString);
-}
+};
 
 // rendering button on DOM to open form  
 const formButton = () => {
@@ -65,7 +65,7 @@ const formButton = () => {
   </form>`
 
   renderToDom("#form", domString);
-}
+};
 
 // create unique ids for new cats
 const createId = (array) => {
@@ -78,7 +78,7 @@ const createId = (array) => {
   } else {
     return 0;
   }
-}
+};
 
 // tasks to create new object for form entry 
 const formTasks = () => {
@@ -104,7 +104,7 @@ const formTasks = () => {
 // click button to show form 
 const showForm = () => {
   document.querySelector("#open-form").addEventListener('click', formOnDom);
-}
+};
 
 
 // click the "Expel!" button to send cat to the Dark Side
@@ -125,7 +125,7 @@ const expelACat = () => {
       expelledOnDom(expelled);
     }
   })
-}
+};
 
 
 // filtering by house with buttons 
@@ -142,7 +142,7 @@ const buttonFilters = () => {
       catsOnDom(catHousesArray);
     }
   })
-}
+};
 
 // show all houses button
 const allHouses = () => {
@@ -151,7 +151,7 @@ const allHouses = () => {
   showAll.addEventListener('click', () => {
     catsOnDom(cats);
   })
-}
+};
 
 // call all event listeners
 const callEventListeners = () => {
@@ -159,7 +159,7 @@ const callEventListeners = () => {
   allHouses();
   buttonFilters();
   expelACat();
-}
+};
 
 
 // start app function
@@ -169,6 +169,6 @@ const startApp = () => {
   formButton();
   formTasks();
   callEventListeners();
-}
+};
 
 startApp();
