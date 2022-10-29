@@ -145,6 +145,17 @@ const buttonFilters = () => {
   })
 }
 
+// show all houses button
+const allHouses = () => {
+  const showAll = document.querySelector("#all-btn");
+
+  showAll.addEventListener('click', () => {
+    catsOnDom(cats);
+  })
+}
+
+
+
 // start app function
 const startApp = () => {
   catsOnDom(cats);
@@ -153,6 +164,7 @@ const startApp = () => {
   showForm();
   formTasks();
   buttonFilters();
+  allHouses();
 }
 
 startApp();
