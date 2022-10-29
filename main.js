@@ -90,7 +90,7 @@ const expelledOnDom = (array) => {
 const formOnDom = () => {
   const domString = 
     `<div class="form-floating mb-3">
-      <input type="text" class="form-control" id="floatingInput" placeholder="cat-name">
+      <input type="text" class="form-control" id="name" placeholder="cat-name">
       <label for="floatingInput">Your Cat's Name</label>
     </div>
     <button type="submit" class="btn btn-success">Sort My Cat</button>`;
