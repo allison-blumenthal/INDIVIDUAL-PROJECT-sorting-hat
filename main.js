@@ -1,12 +1,12 @@
 // array for created objects
-const cats = [
-];
+const cats = [];
 
 // array for expelled cats
 const expelled = [];
 
 // array for randomly assigning houses
 const catHouses = ["Kittendor", "Litterin'", "Ravenpaw", "Hufflescruff"];
+
 
 // rendering to the DOM
 const renderToDom = (divId, htmlToRender) => {
@@ -21,7 +21,7 @@ const catsOnDom = (array) => {
   for (const cat of array) {
     domString += `<div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">${cat.house}</h5>
+          <h3 class="card-title">${cat.house}</h3>
           <h2 class="card-text">${cat.name}</h2>
           <button type="button" class="btn btn-dark" id="expel--${cat.id}">Expel!</button>
         </div>
@@ -92,7 +92,7 @@ const formTasks = () => {
       id: createId(cats),
       name: document.querySelector("#name").value,
       house: catHouses[Math.floor(Math.random() * catHouses.length)]
-    };
+    }
 
     cats.push(newCat);
     catsOnDom(cats);
