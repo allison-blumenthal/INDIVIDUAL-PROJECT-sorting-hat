@@ -44,19 +44,19 @@ const expelledOnDom = (array) => {
   }
 
   renderToDom("#badCats", domString);
-}
+};
 
 // getting the form on DOM 
 const formOnDom = () => {
   const domString = 
     `<div class="form-floating mb-3">
-      <input type="text" class="form-control" id="name" placeholder="cat-name">
+      <input type="text" class="form-control" id="name" placeholder="cat-name" required>
       <label for="floatingInput">Your Cat's Name</label>
     </div>
     <button type="submit" class="btn btn-success">Sort My Cat</button>`;
 
   renderToDom('form', domString);
-}
+};
 
 // rendering button on DOM to open form  
 const formButton = () => {
@@ -65,7 +65,7 @@ const formButton = () => {
   </form>`
 
   renderToDom("#form", domString);
-}
+};
 
 // create unique ids for new cats
 const createId = (array) => {
@@ -78,7 +78,7 @@ const createId = (array) => {
   } else {
     return 0;
   }
-}
+};
 
 // tasks to create new object for form entry 
 const formTasks = () => {
@@ -104,7 +104,7 @@ const formTasks = () => {
 // click button to show form 
 const showForm = () => {
   document.querySelector("#open-form").addEventListener('click', formOnDom);
-}
+};
 
 
 // click the "Expel!" button to send cat to the Dark Side
@@ -125,9 +125,8 @@ const expelACat = () => {
       expelledOnDom(expelled);
     }
   })
-}
+};
 
-expelACat();
 
 // filtering by house with buttons 
 const buttonFilters = () => {
@@ -143,16 +142,33 @@ const buttonFilters = () => {
       catsOnDom(catHousesArray);
     }
   })
-}
+};
+
+// show all houses button
+const allHouses = () => {
+  const showAll = document.querySelector("#all-btn");
+
+  showAll.addEventListener('click', () => {
+    catsOnDom(cats);
+  })
+};
+
+// call all event listeners
+const callEventListeners = () => {
+  showForm();
+  allHouses();
+  buttonFilters();
+  expelACat();
+};
+
 
 // start app function
 const startApp = () => {
   catsOnDom(cats);
   expelledOnDom(expelled);
   formButton();
-  showForm();
   formTasks();
-  buttonFilters();
-}
+  callEventListeners();
+};
 
 startApp();
