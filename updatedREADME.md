@@ -22,7 +22,8 @@ $ cd INDIVIDUAL-PROJECT-sorting-hat
 
 ## Relevant Links 
 - [Check out the deployed site](https://blumenthal-the-sorting-cat-project.netlify.app/)
-- [Project Board](https://docs.google.com/presentation/d/1rVamH-6IoHfDeto_--cD9lQ76Y-G0weGwzPGMZwRq3g/edit?usp=sharing)
+- [Wireframe](https://docs.google.com/presentation/d/1rVamH-6IoHfDeto_--cD9lQ76Y-G0weGwzPGMZwRq3g/edit?usp=sharing)
+- [Project Board](https://github.com/allison-blumenthal/INDIVIDUAL-PROJECT-sorting-hat/issues?q=is%3Aopen+is%3Aissue)
 
 ## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
 <img width="1148" alt="Screenshot of the main image of the app." src="images/sorting-cat-app.png">
