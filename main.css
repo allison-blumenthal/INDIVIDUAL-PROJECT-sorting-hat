@@ -13,7 +13,7 @@ body {
   width: 50%;  
 }
 
-.center-btn {
+form {
   text-align: center;
   padding: 15px;
 }
@@ -35,4 +35,9 @@ body {
   color: white;
   padding: 15px;
   text-align: center;
+}
+
+.bad-cat-card-title {
+  color: darkred;
+  font-weight: bolder;
 }
