@@ -1,5 +1,29 @@
 // array for created objects
 const cats = [
+  {
+    id: 1,
+    house: "Kittendor",
+    name: "Susie",
+    imageUrl: 'https://www.iizcat.com/uploads/2016/10/7ixoq-hp1.gif'
+  },
+  {
+    id: 2, 
+    house: "Litterin'",
+    name: "Bobby",
+    imageUrl: 'https://www.iizcat.com/uploads/2016/10/8vsis-hp4.gif'
+  },
+  {
+    id: 3, 
+    house: "Ravenpaw",
+    name: "Jasper",
+    imageUrl: 'https://www.iizcat.com/uploads/2016/10/t916d-hp3.gif'
+  },
+  {
+    id: 4, 
+    house: "Hufflescruff",
+    name: "BooBoo",
+    imageUrl: 'https://www.iizcat.com/uploads/2016/10/xjzsm-hp2.gif'
+  }
 ];
 
 // array for expelled cats
@@ -21,8 +45,9 @@ const catsOnDom = (array) => {
   for (const cat of array) {
     domString += `<div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">${cat.house}</h5>
-          <h2 class="card-text">${cat.name}</h2>
+          <h3 class="card-title">${cat.house}</h3>
+          <img src="${cat.imageUrl}" class="card-img-top" alt="House image">
+          <h3 class="card-text">${cat.name}</h3>
           <button type="button" class="btn btn-dark" id="expel--${cat.id}">Expel!</button>
         </div>
       </div>`
