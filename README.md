@@ -32,5 +32,8 @@ $ cd INDIVIDUAL-PROJECT-sorting-hat
 
 <img width="1148" alt="Expeling cats to the other side." src="images/dark-side.png">
 
+## Walk-thru Video
+https://www.loom.com/share/1856efd0d51249d6a6c77c851ad18b75
+
 ## Contributors
 - [Allison Blumenthal](https://github.com/allison-blumenthal)
