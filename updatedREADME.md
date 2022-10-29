@@ -7,6 +7,7 @@ This project is a Harry Potter sorting hat dupe! Rather than sorting students, t
 
 ## Get Started 
 $ git clone git@github.com:allison-blumenthal/INDIVIDUAL-PROJECT-sorting-hat.git
+
 $ cd INDIVIDUAL-PROJECT-sorting-hat
 
 ## About the User 
@@ -19,18 +20,14 @@ $ cd INDIVIDUAL-PROJECT-sorting-hat
 - The colorful house-labeled buttons allow the user to filter their cats by house.
 - When a cat is expelled, that card is removed from the existing array and added The cat's house no longer shows as it is no longer relevant.
 
-## Video Walkthrough of APP NAME <!-- A loom link is sufficient -->
-https://www.loom.com/share/829b90d831ea441ba2db6bea724af210
-
 ## Relevant Links 
 - [Check out the deployed site](https://blumenthal-the-sorting-cat-project.netlify.app/)
-- [Project Board] (https://docs.google.com/presentation/d/1rVamH-6IoHfDeto_--cD9lQ76Y-G0weGwzPGMZwRq3g/edit?usp=sharing)
-
-## Code Snippet <!-- OPTIONAL, but doesn't hurt -->
-PLACE CODE SNIPPET HERE
+- [Project Board](https://docs.google.com/presentation/d/1rVamH-6IoHfDeto_--cD9lQ76Y-G0weGwzPGMZwRq3g/edit?usp=sharing)
 
 ## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
-<img width="1148" alt="Your Alt" src="your-link.png">
+<img width="1148" alt="Screenshot of the main image of the app." src="sorting-cat-app.png">
+
+<img width="1148" alt="Expeling cats to the other side." src="dark-side.png">
 
 ## Contributors
 - [Allison Blumenthal](https://github.com/allison-blumenthal)
