@@ -78,7 +78,7 @@ const expelledOnDom = (array) => {
     domString += 
       `<div class="card" style="width: 18rem;">
         <div class="card-body">
-          <h5 class="card-title">${cat.name}</h5>
+          <h2 class="bad-cat-card-title">${cat.name}</h2>
         </div>
       </div>`
   }
@@ -92,7 +92,8 @@ const formOnDom = () => {
     `<div class="form-floating mb-3">
       <input type="text" class="form-control" id="floatingInput" placeholder="cat-name">
       <label for="floatingInput">Your Cat's Name</label>
-    </div>`
+    </div>
+    <button type="submit" class="btn btn-success">Sort My Cat</button>`;
 
   renderToDom('form', domString);
 }
@@ -124,8 +125,8 @@ const formTasks = () => {
 
   const form = document.querySelector('form');
 
-  form.addEventListener('submit', (e) => {
-    e.preventDefault();
+  form.addEventListener('submit', (event) => {
+    event.preventDefault();
 
     const newCat = {
       id: createId(cats),
@@ -137,8 +138,8 @@ const formTasks = () => {
     catsOnDom(cats);
 
     form.reset();
-  })
-}
+  });
+};
 
 // click button to show form 
 const showForm = () => {
@@ -148,7 +149,7 @@ const showForm = () => {
 
 // click the "Expel!" button to send cat to the Dark Side
 const expelACat = () => {
-  const sortedCatsDiv = document.querySelector("#cats");
+  const sortedCatsDiv = document.querySelector("#goodCats");
 
   sortedCatsDiv.addEventListener('click', (e) => {
     if(e.target.id.includes("expel")) {
@@ -172,18 +173,17 @@ expelACat();
 const buttonFilters = () => {
   const filters = document.querySelector("#house-filters");
 
-  filters.addEventListener('click', (e)) => {
+  filters.addEventListener('click', (e) => {
     if(e.target.id.includes("house--")) {
       const [, id] = e.target.id.split('--');
 
       const numId = Number(id);
 
-      const catHouses = cats.filter(cat => cat.house === catHouses[numId]);
-      catsOnDom(catHouses);
+      const catHousesArray = cats.filter(cat => cat.house === catHouses[numId]);
+      catsOnDom(catHousesArray);
     }
-  }
+  })
 }
-
 
 // start app function
 const startApp = () => {

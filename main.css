@@ -13,6 +13,11 @@ body {
   width: 50%;  
 }
 
+form {
+  text-align: center;
+  padding: 15px;
+}
+
 .sorted-cats {
   width: 66.666%;
   background-color: lightblue;
@@ -30,4 +35,9 @@ body {
   color: white;
   padding: 15px;
   text-align: center;
+}
+
+.bad-cat-card-title {
+  color: darkred;
+  font-weight: bolder;
 }
