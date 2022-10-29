@@ -3,26 +3,22 @@ const cats = [
   {
     id: 1,
     house: "Kittendor",
-    name: "Susie",
-    imageUrl: 'https://www.iizcat.com/uploads/2016/10/7ixoq-hp1.gif'
+    name: "Susie"
   },
   {
     id: 2, 
     house: "Litterin'",
-    name: "Bobby",
-    imageUrl: 'https://www.iizcat.com/uploads/2016/10/8vsis-hp4.gif'
+    name: "Bobby"
   },
   {
     id: 3, 
     house: "Ravenpaw",
-    name: "Jasper",
-    imageUrl: 'https://www.iizcat.com/uploads/2016/10/t916d-hp3.gif'
+    name: "Jasper"
   },
   {
     id: 4, 
     house: "Hufflescruff",
-    name: "BooBoo",
-    imageUrl: 'https://www.iizcat.com/uploads/2016/10/xjzsm-hp2.gif'
+    name: "BooBoo"
   }
 ];
 
@@ -31,6 +27,7 @@ const expelled = [];
 
 // array for randomly assigning houses
 const catHouses = ["Kittendor", "Litterin'", "Ravenpaw", "Hufflescruff"];
+
 
 // rendering to the DOM
 const renderToDom = (divId, htmlToRender) => {
@@ -46,8 +43,7 @@ const catsOnDom = (array) => {
     domString += `<div class="card" style="width: 18rem;">
         <div class="card-body">
           <h3 class="card-title">${cat.house}</h3>
-          <img src="${cat.imageUrl}" class="card-img-top" alt="House image">
-          <h3 class="card-text">${cat.name}</h3>
+          <h2 class="card-text">${cat.name}</h2>
           <button type="button" class="btn btn-dark" id="expel--${cat.id}">Expel!</button>
         </div>
       </div>`
@@ -117,7 +113,7 @@ const formTasks = () => {
       id: createId(cats),
       name: document.querySelector("#name").value,
       house: catHouses[Math.floor(Math.random() * catHouses.length)]
-    };
+    }
 
     cats.push(newCat);
     catsOnDom(cats);
