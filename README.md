@@ -26,6 +26,8 @@ $ cd INDIVIDUAL-PROJECT-sorting-hat
 - [Project Board](https://github.com/allison-blumenthal/INDIVIDUAL-PROJECT-sorting-hat/issues?q=is%3Aopen+is%3Aissue)
 
 ## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
+<img width="1148" alt="Screenshot of the main image of the app." src="images/expel-codesnippet.png">
+
 <img width="1148" alt="Screenshot of the main image of the app." src="images/sorting-cat-app.png">
 
 <img width="1148" alt="Expeling cats to the other side." src="images/dark-side.png">
