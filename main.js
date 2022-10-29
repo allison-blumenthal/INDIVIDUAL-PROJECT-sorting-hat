@@ -50,7 +50,7 @@ const expelledOnDom = (array) => {
 const formOnDom = () => {
   const domString = 
     `<div class="form-floating mb-3">
-      <input type="text" class="form-control" id="name" placeholder="cat-name">
+      <input type="text" class="form-control" id="name" placeholder="cat-name" required>
       <label for="floatingInput">Your Cat's Name</label>
     </div>
     <button type="submit" class="btn btn-success">Sort My Cat</button>`;
@@ -127,7 +127,6 @@ const expelACat = () => {
   })
 }
 
-expelACat();
 
 // filtering by house with buttons 
 const buttonFilters = () => {
@@ -154,6 +153,13 @@ const allHouses = () => {
   })
 }
 
+// call all event listeners
+const callEventListeners = () => {
+  showForm();
+  allHouses();
+  buttonFilters();
+  expelACat();
+}
 
 
 // start app function
@@ -161,10 +167,8 @@ const startApp = () => {
   catsOnDom(cats);
   expelledOnDom(expelled);
   formButton();
-  showForm();
   formTasks();
-  buttonFilters();
-  allHouses();
+  callEventListeners();
 }
 
 startApp();
