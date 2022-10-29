@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sorting Hat Assessment Project</title>
+    <title>The Sorting Cat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ruslan+Display&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
     <link rel="stylesheet" href="main.css">
   </head>
@@ -12,9 +15,10 @@
   <body>
     <div class="card">
       <div class="card-body">
-        <h3 class="card-title">Hello and Welcome to Hogwarts' very first "Sorting Cat!"</h3>
-        <p class="card-text">Use the "Sorting Cat" to discover your cat's Hogwarts House.</p>
+        <h1 class="card-title">Hello and Welcome to Hogwarts' very first "Sorting Cat!"</h1>
+        <h2 class="card-text">Use the "Sorting Cat" to discover your cat's Hogwarts House.</h2>
         <img src="images/cat-houses.jpg" class="card-img-top" alt="Illustrations of cats representing Hogwarts houses">
+        <h2 class="card-text">Click below to use the "Sorting Cat!"</h2>
       </div>
     </div>
 
@@ -24,18 +28,18 @@
 
     <div class="d-flex">
       <div class="sorted-cats">
+        <h2 class="house-cats-title">Cool Cats in their Houses</h2>
         <div id="house-filters">
           <button type="button" class="btn btn-danger" id="house--0">Kittendor</button>
           <button type="button" class="btn btn-success" id="house--1">Litterin'</button>
           <button type="button" class="btn btn-primary" id="house--2">Ravenpaw</button>
           <button type="button" class="btn btn-warning" id="house--3">Hufflescruff</button>
         </div>
-        <h2 class="house-cats-title">Cool Cats in their Houses</h2>
         <div id="goodCats" class="d-flex flex-wrap"></div>
       </div>
 
       <div class="expelled">
-        <h2>Expelled to the Dark Side</h2>
+        <h2 class="expelled-cats-title">Expelled to the Dark Side</h2>
         <div id="badCats" class="d-flex flex-wrap"></div>
       </div>
     </div>

@@ -1,45 +1,5 @@
 // array for created objects
 const cats = [
-  {
-    id: 1,
-    name: "Minky",
-    house: "Hufflescruff"
-  },
-  {
-    id: 2,
-    name: "Lilah",
-    house: "Ravenpaw"
-  },
-  {
-    id: 3,
-    name: "Maxx",
-    house: "Litterin'"
-  },
-  {
-    id: 4,
-    name: "Azure",
-    house: "Kittendor"
-  },
-  {
-    id: 5,
-    name: "Harriet",
-    house: "Hufflescruff"
-  },
-  {
-    id: 6,
-    name: "Rhyme",
-    house: "Ravenpaw"
-  },
-  {
-    id: 7,
-    name: "Ernesto",
-    house: "Litterin'"
-  },
-  {
-    id: 8,
-    name: "Ferdinand",
-    house: "Kittendor"
-  }
 ];
 
 // array for expelled cats

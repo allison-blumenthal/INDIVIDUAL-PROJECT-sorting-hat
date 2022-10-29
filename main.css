@@ -1,21 +1,46 @@
 body {
   background-color: white;
+  font-family: 'Ruslan Display', cursive;
+}
+
+h1 {
+  font-size: 50px;
+}
+
+h2 {
+  font-size: 40px;
+}
+
+.btn {
+  font-size: 24px;
+  margin: 10px;
+}
+
+.card-text {
+  color: darkslategrey;
 }
 
 .card {
   text-align: center;
+  margin: 20px;
 }
 
 .card-img-top {
   display: block;
   margin-left: auto;
   margin-right: auto;
+  margin-top: 15px;
+  margin-bottom: 15px;
   width: 50%;  
 }
 
 form {
   text-align: center;
   padding: 15px;
+}
+
+.form-control {
+  font-size: 20px;
 }
 
 .sorted-cats {
@@ -25,7 +50,7 @@ form {
   text-align: center;
 }
 
-.house-cats-title {
+.house-cats-title .expelled-cats-title {
   padding: 10px;
 }
 
@@ -40,4 +65,5 @@ form {
 .bad-cat-card-title {
   color: darkred;
   font-weight: bolder;
+  text-align: center;
 }
