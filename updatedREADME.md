@@ -25,8 +25,9 @@ $ cd INDIVIDUAL-PROJECT-sorting-hat
 - [Project Board](https://docs.google.com/presentation/d/1rVamH-6IoHfDeto_--cD9lQ76Y-G0weGwzPGMZwRq3g/edit?usp=sharing)
 
 ## Project Screenshots <!-- These can be inside of your project. Look at the repos from class and see how the images are included in the readme -->
-<img width="1148" alt="Your Alt" src="your-link.png">
+<img width="1148" alt="Screenshot of the main image of the app." src="sorting-cat-app.png">
 
+<img width="1148" alt="Expeling cats to the other side." src="dark-side.png">
 
 ## Contributors
 - [Allison Blumenthal](https://github.com/allison-blumenthal)
